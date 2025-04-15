@@ -1,3 +1,23 @@
+# Load Session State from HAR Files | 从HAR文件加载会话状态
+
+Browser-use supports loading session states and cookies from HAR (HTTP Archive) files, allowing AI agents to access websites in logged-in state.
+
+浏览器使用（Browser-use）支持从HAR（HTTP Archive）文件加载会话状态和Cookie，使AI代理能够以登录状态访问网站。
+
+```bash
+# Load session from HAR file and execute custom tasks | 从HAR文件加载会话并执行自定义任务
+python examples/features/load_from_har.py resource/har/xxx.har {after_login_prompt}
+```
+
+- `resource/har/xxx.har`: Path to HAR file | HAR文件路径
+- `{after_login_prompt}`: Optional parameter, custom instructions after login | 可选参数，自定义登录后执行的指令
+
+This feature allows you to easily reuse existing login states without manually logging in each time, greatly improving the efficiency of automated workflows.
+
+这个功能让您能够轻松地复用已有的登录状态，而无需每次都手动登录账户，大大提高了自动化工作流的效率。
+
+---
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./static/browser-use-dark.png">
   <source media="(prefers-color-scheme: light)" srcset="./static/browser-use.png">
